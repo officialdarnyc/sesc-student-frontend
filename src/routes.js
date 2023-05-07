@@ -5,6 +5,7 @@ import GraduationEligibility from "./pages/dashboard/GraduationEligibility";
 import AuthLayout from "./pages/auth/AuthLayout";
 import SignIn from "./pages/auth/SignIn";
 import SignUp from "./pages/auth/SignUp";
+import Profile from "./pages/dashboard/Profile";
 
 const routesObjects = [
   {
@@ -32,6 +33,15 @@ const routesObjects = [
     element: (
       <DashboardLayout>
         <GraduationEligibility />
+      </DashboardLayout>
+    ),
+  },
+  {
+    id: 6,
+    path: "/dashboard/profile",
+    element: (
+      <DashboardLayout>
+        <Profile/>
       </DashboardLayout>
     ),
   },
