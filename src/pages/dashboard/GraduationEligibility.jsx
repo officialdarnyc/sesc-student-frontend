@@ -13,13 +13,10 @@ function GraduationEligibility() {
     const eligResponse = await getEligibility(student.externalStudentId);
     setIsElig(eligResponse?.data?.data.hasOutstandingBalance);
     setIsLoading(false);
-    console.log(eligResponse, "rcheckz");
-    console.log(eligResponse?.data?.data.hasOutstandingBalance, "cwaercheckz");
   };
   useEffect(() => {
     fetchEligibilityStudent();
   }, []);
-  console.log(isElig, "checkz");
 
   return (
     <div className="flex items-center justify-center m-auto h-[350px]">

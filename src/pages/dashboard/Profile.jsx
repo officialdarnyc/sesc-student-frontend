@@ -10,7 +10,6 @@ import { useNavigate } from "react-router-dom";
 function Profile() {
   const navigate = useNavigate();
   const { student, setStudent } = useAuth();
-  console.log(student);
   const [profile, setProfile] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const [isAllowed, setIsAllowed] = useState(true);
@@ -32,7 +31,6 @@ function Profile() {
   useEffect(() => {
     fetchProfile();
   }, [isAllowed, isLoading]);
-  console.log(profile.firstName, "gdshj");
 
   const handleSubmit = async (e) => {
     e.preventDefault();
