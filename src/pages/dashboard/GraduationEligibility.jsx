@@ -13,13 +13,10 @@ function GraduationEligibility() {
     const eligResponse = await getEligibility(student.externalStudentId);
     setIsElig(eligResponse?.data?.data.hasOutstandingBalance);
     setIsLoading(false);
-    console.log(eligResponse, "rcheckz");
-    console.log(eligResponse?.data?.data.hasOutstandingBalance, "cwaercheckz");
   };
   useEffect(() => {
     fetchEligibilityStudent();
   }, []);
-  console.log(isElig, "checkz");
 
   return (
     <div className="flex items-center justify-center m-auto h-[350px]">
@@ -28,19 +25,19 @@ function GraduationEligibility() {
       ) : isElig ? (
         <div className="flex flex-col items-center">
           <h1 className="text-2xl font-bold text-red">
-            You Are Not Eligible To Graduate
+            Sorry, You Are Not Eligible To Graduate!
           </h1>
           <p className="text-lg font-bold text-red">
-            You have an outstanding invoice!
+            You have an outstanding invoice.
           </p>
         </div>
       ) : (
         <div className="flex flex-col items-center">
           <h1 className="text-2xl font-bold text-white">
-            You Are Eligible To Graduate
+            Congratulations!!! You Are Eligible To Graduate.
           </h1>
           <p className="text-lg font-bold text-white">
-            You don't have an outstanding invoice!
+            You don't have any outstanding invoice.
           </p>
         </div>
       )}
