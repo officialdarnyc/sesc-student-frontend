@@ -1,10 +1,16 @@
-import React from "react";
+import React,{useEffect} from "react";
 import search from "../../assets/dash/search.svg";
 import notification from "../../assets/dash/bell.svg";
 import { useAuth } from "../../context/authContext";
 
 function Navbar() {
   const {student} = useAuth()
+
+
+  const studentData = JSON.parse(localStorage.getItem("student"));
+
+ 
+
   return (
     <div className="h-[80px] w-full shadow-lg py-4 px-8">
       <div className="flex gap-[200px]  justify-start items-center ">

@@ -12,6 +12,7 @@ import { useNavigate } from "react-router-dom";
 import Courses from "./pages/dashboard/Courses";
 import CourseRegistered from "./pages/dashboard/CourseRegistered";
 import GraduationEligibility from "./pages/dashboard/GraduationEligibility";
+import Profile from "./pages/dashboard/Profile";
 function App() {
   const auth = useAuth();
 
@@ -85,6 +86,16 @@ function App() {
                     element={
                       <DashboardLayout>
                                 <GraduationEligibility />
+
+                      </DashboardLayout>
+                    }
+                  ></Route>
+                  <Route
+                    key={7}
+                    path="/dashboard/profile"
+                    element={
+                      <DashboardLayout>
+                                <Profile />
 
                       </DashboardLayout>
                     }

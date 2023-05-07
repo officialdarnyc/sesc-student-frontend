@@ -25,7 +25,7 @@ function GraduationEligibility() {
       ) : isElig ? (
         <div className="flex flex-col items-center">
           <h1 className="text-2xl font-bold text-red">
-            Sorry, You Are Not Eligible To Graduate!
+            Sorry! You Are Not Eligible To Graduate.
           </h1>
           <p className="text-lg font-bold text-red">
             You have an outstanding invoice.
@@ -37,7 +37,7 @@ function GraduationEligibility() {
             Congratulations!!! You Are Eligible To Graduate.
           </h1>
           <p className="text-lg font-bold text-white">
-            You don't have any outstanding invoice.
+            You don't have an outstanding invoice.
           </p>
         </div>
       )}
